@@ -15,27 +15,29 @@ header{
 	grid-template-columns: auto 1fr;
 	grid-gap: 1em;
 	place-items: center start;
-}
-header > h1{
-	font-size: 1.5em;
-	font-weight: bold;
-}
-nav{
-	justify-self: end;
-	font-weight: 300;
-	font-size: 0.9em;
-}
-nav a{
-	text-decoration: none;
-	color: $black;
-	padding-left: 40px;
-	padding-right: 20px;
-}
-nav a:last-child{
-	padding-right: 0;
-}
-nav > .active{
-	color: $gray;
+	 h1{
+		font-size: 1.5em;
+		font-weight: bold;
+		margin-left: 1vw;
+	}
+	nav{
+		justify-self: end;
+		font-weight: 300;
+		font-size: 0.9em;
+		margin-right: 1vw;
+		a{
+			text-decoration: none;
+			color: $black;
+			padding-left: 40px;
+			padding-right: 20px;
+		}
+		a:last-child{
+			padding-right: 0;
+		}
+		.active{
+			color: $gray;
+		}
+	}
 }
 
 // MAIN
@@ -44,8 +46,8 @@ main{
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr auto 1fr;
 	grid-gap: 2em;
-	margin-left: 5vw;
-	margin-right: 5vw;
+	margin-left: 1vw;
+	margin-right: 1vw;
 }
 #home{
 	height: 450px;
@@ -88,7 +90,7 @@ main{
 #portfolio{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-	grid-gap: 1em;
+	grid-gap: 2px;
 	background-color: $light-gray;
 	align-content: center;
     justify-items: center;
@@ -112,7 +114,39 @@ main{
 	}
 }
 #contact{
-	background: #140efa;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	margin-bottom: 50px;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	grid-gap: 2em;
+	h3{
+		font-size: 0.8em;
+		font-weight: normal;
+	}
+	small{
+		font-size: 10px;
+		color: #888;
+		.fa-heart{
+			color: #ec1919;
+		}
+		.highlight{
+			color: #000;
+		}
+	}
+	div:nth-of-type(4) > small{
+		display: block;
+		padding: 12px 0;
+	}
+}
+.social > a{
+	font-size: 12px;
+	text-decoration: none;
+	color: #000;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 #back-to-top{
 	position: fixed;
