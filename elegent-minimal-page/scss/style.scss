@@ -88,7 +88,7 @@ main{
 #portfolio{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
-	grid-gap: 1em;
+	grid-gap: 2px;
 	background-color: $light-gray;
 	align-content: center;
     justify-items: center;
@@ -112,7 +112,39 @@ main{
 	}
 }
 #contact{
-	background: #140efa;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	margin-bottom: 50px;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	grid-gap: 2em;
+	h3{
+		font-size: 0.8em;
+		font-weight: normal;
+	}
+	small{
+		font-size: 10px;
+		color: #888;
+		.fa-heart{
+			color: #ec1919;
+		}
+		.highlight{
+			color: #000;
+		}
+	}
+	div:nth-of-type(4) > small{
+		display: block;
+		padding: 12px 0;
+	}
+}
+.social > a{
+	font-size: 12px;
+	text-decoration: none;
+	color: #000;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 #back-to-top{
 	position: fixed;
