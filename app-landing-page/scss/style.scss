@@ -6,6 +6,7 @@
 body{
 	font-family: Roboto, sans-serif;
 	line-height: 1.5;
+	color: #555;
 }
 h1, h2, h3, h4, h5, h6{
 	margin-bottom: 20px;
@@ -100,13 +101,26 @@ main{
 	.testimonial{
 		padding-bottom: 50px;
 		border-bottom: 20px solid coral;
+		&::before{
+			border-left: 3px solid cornflowerblue;
+			height: 25px;
+		}
 		blockquote{
 			font-size: 0.7em;
 			padding: 1px 10px;
-			border-left: 3px solid cornflowerblue;
-			height: 25px;
 			overflow: none;
 		}
+	}
+}
+.col-4{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2em;
+	align-items: center;
+	h2{
+		grid-column: 1 / -1;
+		justify-self: center;
+		font-size: 1.8em;
 	}
 }
 .hero{
@@ -117,7 +131,7 @@ main{
 		text-align: right;
 	}
 }
-#video{
+.full-length{
 	height: 35vh;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -146,9 +160,74 @@ main{
 		background: coral;
 		color: #fff;
 	}
+	#stats{
+		display: flex;
+		justify-content: space-around;
+		color: #fff;
+		background-color: #ff662e;
+	}
+}
+.numbers{
+	grid-gap: 0;
 }
 .reviews{
 	padding-bottom: 50px;
 	border-bottom: 1px solid coral;
 }
-
+.benefits{
+	.benefit-description{
+		display: grid;
+		grid-gap: 5px;
+		grid-template-columns: 1fr 10fr;
+		grid-template-rows: 1fr;
+		i{
+			grid-column: 1;
+			grid-row: 1 / span 2;
+			padding-top: 5px;
+		}
+	}
+}
+.pricing{
+	div{
+		display: flex;
+		flex-direction: column;
+		place-items: center center;
+		h4{
+			color: coral;
+			font-size: 2em;
+			margin-bottom: 0;
+			padding-top: 10px;
+		}
+	}
+	.plan{
+		border-radius: 5px;
+		box-shadow: 0px 2px 3px #333;
+		p{
+			line-height: 3;
+		}
+		& > *{
+			text-align: center;
+			width: 100%;
+			border-bottom: 1px solid #333;
+		}
+		& > p:last-of-type,
+		.btn{
+			border-bottom: none;
+		}
+		.btn{
+			width: 50%;
+		}
+		small{
+			font-size: 0.6em;
+			border-bottom: none;
+			margin-bottom: 30px;
+		}
+	}
+	.active{
+		border-top: 10px solid coral;
+	}
+	#tagline{
+		grid-column: 2 / 4;
+		justify-self: center;
+	}
+}
