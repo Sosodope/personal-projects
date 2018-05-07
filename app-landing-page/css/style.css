@@ -56,19 +56,24 @@ main {
   text-decoration: none;
   color: coral; }
 
-.col-2 {
+.col-2,
+.col-2-2,
+.col-2-3 {
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-gap: 2em;
   align-items: center; }
-  .col-2 h1 {
+  .col-2 h1,
+  .col-2-2 h1,
+  .col-2-3 h1 {
     font-size: 3.3em; }
 
 .col-2-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2em;
-  align-items: center; }
+  grid-template-columns: 1fr 1fr; }
+
+.col-2-3 {
+  grid-template-columns: 2fr 1fr;
+  align-items: start; }
 
 .col-3 {
   display: grid;
@@ -194,5 +199,41 @@ main {
 .pricing #tagline {
   grid-column: 2 / 4;
   justify-self: center; }
+
+#questions-answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  #questions-answers h4 {
+    font-size: 1.3em; }
+  #questions-answers .question {
+    font-weight: 700; }
+
+#subscription {
+  height: 100%;
+  background: coral;
+  padding: 30px 30px;
+  color: #fff; }
+  #subscription h5 {
+    font-size: 1.1em; }
+  #subscription form {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1em; }
+    #subscription form > * {
+      font-size: 0.8em; }
+    #subscription form input {
+      width: 100%;
+      padding: 10px 5px;
+      font-size: 1.1em; }
+    #subscription form label:first-of-type {
+      grid-column: 1 / -1; }
+    #subscription form label:nth-of-type(2) {
+      grid-column: 1 / 4; }
+      #subscription form label:nth-of-type(2) input {
+        color: coral; }
+    #subscription form label:last-of-type {
+      grid-column: 1 / -1; }
+      #subscription form label:last-of-type input {
+        width: 5%; }
 
 /*# sourceMappingURL=style.css.map */
