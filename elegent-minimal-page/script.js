@@ -1,3 +1,22 @@
+//image slider
+let i = 0;
+const images = ['images/img-1.jpg', 'images/img-2.jpg', 'images/img-3.jpg', 'images/img-4.jpg', 'images/img-5.jpg', 'images/img-6.jpg'];
+const time = 10000;
+const slider = document.getElementById('slide');
+
+function startSlideShow(){
+	slider.src = images[i];
+	if(i < images.length - 1){
+		i++;
+	}else{
+		i = 0;
+	}
+	setTimeout('startSlideShow()', time);
+}
+
+window.onload = startSlideShow;
+
+//back to top button
 var btn = document.getElementById('back-to-top'),
 	body = document.body,
 	docElem = document.documentElement,

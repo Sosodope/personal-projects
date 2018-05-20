@@ -84,14 +84,18 @@ main {
   #portfolio img {
     width: 100%; }
 
-#testimonials div {
+#testimonials {
   background: #140e0f;
-  color: #ffffff;
-  padding: 80px 30px;
-  text-align: center;
-  height: 120px; }
-#testimonials .hide {
-  display: none; }
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px; }
+  #testimonials div {
+    color: #ffffff;
+    padding: 80px 30px;
+    text-align: center; }
+  #testimonials .hide {
+    display: none; }
 
 #contact {
   margin-left: 1vw;
@@ -146,5 +150,12 @@ main {
     padding: 1em 3em; }
   #back-to-top.visible {
     opacity: 1; }
+
+.next-msg-btn {
+  width: 5px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  border: none; }
 
 /*# sourceMappingURL=style.css.map */
